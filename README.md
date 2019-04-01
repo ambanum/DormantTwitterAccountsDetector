@@ -1,15 +1,19 @@
-Detect dormant bots on Twitter within the network of a initially predetermined user.
+Detect dormant bots on Twitter within the network of some given account.
 
-# Feature of a dormant bot
+# Features of a dormant account
  
+_Keep in mind that this is just a hackathon proof of concept. No one is saying that any account bearing these features is necessarily a dormant bot. However, manual classification has proven that even with such naive conditions, around 85% of detected accounts do indeed seem to be inauthentic._
+
 - Max 15 tweets
 - Ratio Friends/Followers > 3
-- Created after the Feb 01 2019
+- Created after Feb 01 2019
 
 # Configuration
 
 In the file `.env`:
-- Specify your twitter credentials:
+
+- Specify your Twitter credentials:
+
 ```
     CONSUMER_KEY=<TWITTER_CONSUMER_KEY>
     CONSUMER_SECRET=<TWITTER_CONSUMER_SECRET>
@@ -17,12 +21,14 @@ In the file `.env`:
     ACCESS_TOKEN_SECRET=<TWITTER_ACCESS_TOKEN_SECRET>
 ```
 
-- Specify the mongo url:
+- Specify the MongoDB url:
+
 ```
     MONGO_URL=mongodb://localhost/TwitterGraphExplorer
 ```
 
-- Specify the twitter handle the seed user, it means the user from whom the graph exploration will start:
+- Specify the Twitter handle of the seed user, that is the user from whom the graph exploration will start:
+
 ```
     USER_SEED=ndpnt
 ```
@@ -36,11 +42,13 @@ Install dependencies:
 ```
 
 Insert the seed user:
+
 ```
     node firstUserToExplore.js
 ```
 
 Start the detector:
+
 ```
     node jobsRunner.js
 ```
@@ -51,5 +59,5 @@ You also can start a web UI to display a counter of dormant bots found:
 ```
 # Result
 
-As result, the script stores every users it considers being a dormant bot in a `twitterusers` collection.
-It also stores every users in a backup collection to allow changing features and rerun the detector locally without calling the Twitter API.
+As result, the script stores every account matching the given conditions in a `twitterusers` collection.
+It also stores every encountered account in a backup collection to allow changing features and rerun the detector locally without calling the Twitter API.
