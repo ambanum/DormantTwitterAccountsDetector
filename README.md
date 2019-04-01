@@ -1,6 +1,6 @@
-Detect sleeping bots on Twitter within the network of a initially predetermined user.
+Detect dormant bots on Twitter within the network of a initially predetermined user.
 
-# Feature of a sleeping bot
+# Feature of a dormant bot
  
 - Max 15 tweets
 - Ratio Friends/Followers > 3
@@ -45,11 +45,11 @@ Start the detector:
     node jobsRunner.js
 ```
 
-You also can start a web UI to display a counter of sleeping bots found:
+You also can start a web UI to display a counter of dormant bots found:
 ```
     npm start
 ```
 # Result
 
-As result, the script stores every users it considers being a sleeping bot in a `twitterusers` collection.
+As result, the script stores every users it considers being a dormant bot in a `twitterusers` collection.
 It also stores every users in a backup collection to allow changing features and rerun the detector locally without calling the Twitter API.
