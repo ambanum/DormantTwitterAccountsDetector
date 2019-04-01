@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	section.hero.is-success.is-fullheight
+		.hero-head
+			header.navbar
+				.container
+					.navbar-brand
+						| Hackathon #ChallengeData
+					.navbar-end
+						| Sciences Po Saint-Germain-en-Laye
+
+		.hero-body
+			.container.has-text-centered
+				h1.title
+					| #{count}
+				h2.subtitle
+					| Comptes Twitter inauthentiques détectés
+					br
+					| avec une fiabilité de 82,7% à 87,1%
+
+				div
+					a.navbar-item(href='/files/editorial.pdf', target="_blank")
+						| Article de présentation
+					a.navbar-item(href='/files/strategie_croissance_dormants.pdf', target="_blank")
+						| Comment ces comptes obtiennent des abonnés
+					a.navbar-item(href='/files/documentation_methode_outils.pdf', target="_blank")
+						| Comment trouver d'autres comptes
+				div
+					span.navbar-item(href='https://drive.google.com/open?id=1QsxtcfzR4O4_o1MxSJzyXFEeVZ7n5_7j', target="_blank")
+						| Code source&nbsp;
+						i (bientôt ouvert)
+					span.navbar-item(href='https://drive.google.com/open?id=1QsxtcfzR4O4_o1MxSJzyXFEeVZ7n5_7j', target="_blank")
+						| Données source&nbsp;
+						i (bientôt ouvertes)
