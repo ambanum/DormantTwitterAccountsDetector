@@ -1,4 +1,4 @@
-Detect sleeping bots within the following network of a predetermined inital user on Twitter.
+Detect sleeping bots on Twitter within the network of a initially predetermined user.
 
 # Feature of a sleeping bot
  
