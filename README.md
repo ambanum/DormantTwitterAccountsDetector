@@ -45,6 +45,10 @@ Start the detector:
     node jobsRunner.js
 ```
 
+You also can start a web UI to display a counter of sleeping bots found:
+```
+    npm start
+```
 # Result
 
 As result, the script stores every users it considers being a sleeping bot in a `twitterusers` collection.
