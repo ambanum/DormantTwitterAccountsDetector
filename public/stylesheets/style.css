@@ -17,6 +17,21 @@ body {
 .hero-head {
 	padding: 10px;
 	padding-bottom: 0;
+	color: #116830;
+}
+
+.hero-foot {
+	padding: 10px;
+	padding-top: 0;
+}
+
+.hero .hero-foot a {
+	text-decoration: underline;
+}
+
+.hero.is-success .hero-foot a:not(.button):not(.dropdown-item):not(.tag):hover, 
+.hero.is-success .hero-foot span {
+	color: #116830;
 }
 
 [class*="c3-target-Neuvième-décile"] .c3-line,

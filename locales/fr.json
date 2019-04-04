@@ -1,0 +1,12 @@
+{
+	"hero.body.subtitle.firstLine": "Comptes Twitter inauthentiques détectés",
+	"hero.body.subtitle.secondLine": "avec une fiabilité de 82,7% à 87,1%",
+	"hero.body.links.editorial": "Article de présentation",
+	"hero.body.links.how.these.accounts.get.subscribers": "Comment ces comptes obtiennent des abonnés",
+	"hero.body.links.how.to.find.other.accounts": "Comment trouver d'autres comptes",
+	"hero.body.links.source.code": "Code source",
+	"hero.body.links.data": "Données source",
+	"hero.body.links.soon": "(bientôt ouvertes)",
+	"graphs.title": "Évolution du cluster",
+	"graphs.subtitle": "(sur un échantillon de 900 comptes)"
+}

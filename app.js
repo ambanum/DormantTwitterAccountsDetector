@@ -1,15 +1,27 @@
 require('dotenv').config();
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const mongoose = require('mongoose');
+const i18n = require('i18n');
 mongoose.connect(process.env.MONGO_URL);
 
-var indexRouter = require('./routes/index');
+const indexRouter = require('./routes/index');
 
-var app = express();
+const app = express();
+
+i18n.configure({
+    // setup some locales - other locales default to en silently
+    locales: ['en', 'fr'],
+   
+    // sets a custom cookie name to parse locale settings from
+    cookie: 'DormantTwitterAccountsDetector_locale',
+   
+    // where to store json files - defaults to './locales'
+    directory: __dirname + '/locales'
+  });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,6 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(i18n.init);
 
 app.use('/', indexRouter);
 

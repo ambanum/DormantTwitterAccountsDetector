@@ -1,12 +1,15 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const i18n = require('i18n');
 
 const _ = require('lodash');
 const TwitterUser = require('../models/twitterUser');
 const TwitterUserToExplore = require('../models/twitterUserToExplore');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/:lang?', function(req, res, next) {
+	const lang = req.params.lang || 'en';
+	i18n.setLocale(res.locals, lang);
     let twitterUserCount, twitterUserToExploreCount;
     
 	TwitterUser.find({}).count()
@@ -16,7 +19,9 @@ router.get('/', function(req, res, next) {
 		})
 		.then((count) => {
 			twitterUserToExploreCount = count;
-			res.render('index', { count: (twitterUserCount + twitterUserToExploreCount), twitterUserCount, twitterUserToExploreCount });
+			console.log("i18n.getLocale()", req.getLocale());
+			
+			res.render('index', { lang: lang , count: (twitterUserCount + twitterUserToExploreCount), twitterUserCount, twitterUserToExploreCount });
 		})
 		.catch(next);
 });

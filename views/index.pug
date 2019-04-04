@@ -15,20 +15,46 @@ block content
 				h1.title
 					| #{count}
 				h2.subtitle
-					| Comptes Twitter inauthentiques détectés
+					| #{__('hero.body.subtitle.firstLine')}
 					br
-					| avec une fiabilité de 82,7% à 87,1%
+					| #{__('hero.body.subtitle.secondLine')}
 
 				div
 					a.navbar-item(href='/files/editorial.pdf', target="_blank")
-						| Article de présentation
+						| #{__('hero.body.links.editorial')}
 					a.navbar-item(href='/files/strategie_croissance_dormants.pdf', target="_blank")
-						| Comment ces comptes obtiennent des abonnés
+						| #{__('hero.body.links.how.these.accounts.get.subscribers')}
 					a.navbar-item(href='/files/documentation_methode_outils.pdf', target="_blank")
-						| Comment trouver d'autres comptes
+						| #{__('hero.body.links.how.to.find.other.accounts')}
 				div
 					a.navbar-item(href='https://github.com/Ndpnt/DormantTwitterAccountsDetector', target="_blank")
-						| Code source
+						| #{__('hero.body.links.source.code')}
 					span.navbar-item(href='https://drive.google.com/open?id=1QsxtcfzR4O4_o1MxSJzyXFEeVZ7n5_7j', target="_blank")
-						| Données source&nbsp;
-						i (bientôt ouvertes)
+						| #{__('hero.body.links.data')}&nbsp;
+						i #{__('hero.body.links.soon')}
+		.hero-foot
+			.container
+				.level
+					.level-left
+					.level-right
+						| Langues :&nbsp;
+						if lang === 'en'
+							a.level-item(href='/fr')
+								| Français
+							span.level-item
+								| English
+						if lang === 'fr'
+							span.level-item
+								| Français
+							a.level-item(href='/en')
+								| English
+	.section.graph-title
+		.container.has-text-centered
+			h1.title
+				| #{__('graphs.title')}
+			h2.subtitle
+				| #{__('graphs.subtitle')})
+	div.graphs
+		div#followers
+		div#followings
+		div#tweets
