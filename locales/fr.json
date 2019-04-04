@@ -7,6 +7,7 @@
 	"hero.body.links.source.code": "Code source",
 	"hero.body.links.data": "Données source",
 	"hero.body.links.soon": "(bientôt ouvertes)",
+	"hero.footer.languages": "Langues :",
 	"graphs.title": "Évolution du cluster",
 	"graphs.subtitle": "(sur un échantillon de 900 comptes)"
 }
