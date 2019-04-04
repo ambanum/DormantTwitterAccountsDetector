@@ -8,6 +8,6 @@
 	"hero.body.links.data": "Source data",
     "hero.body.links.soon": "(soon to be opened)",
     "hero.footer.languages": "Languages:",
-	"graphs.title": "Cluster evolution",
+    "graphs.title": "Cluster evolution",
 	"graphs.subtitle": "(on a sample of 900 accounts)"
 }

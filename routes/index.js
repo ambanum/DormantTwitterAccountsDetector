@@ -18,9 +18,7 @@ router.get('/:lang?', function(req, res, next) {
 			return TwitterUserToExplore.find({}).count();
 		})
 		.then((count) => {
-			twitterUserToExploreCount = count;
-			console.log("i18n.getLocale()", req.getLocale());
-			
+			twitterUserToExploreCount = count;			
 			res.render('index', { lang: lang , count: (twitterUserCount + twitterUserToExploreCount), twitterUserCount, twitterUserToExploreCount });
 		})
 		.catch(next);
