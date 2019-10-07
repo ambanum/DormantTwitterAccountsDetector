@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+		<title>Bot Detection - Identify clusters of bots on Twitter</title>
+		<meta name="description" content="{{ page.description }}">
+
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<noscript>
+			<meta http-equiv="refresh" content="0; URL=/fr">
+		</noscript>
+	</head>
+
+	<body class="landing">
+		<script>
+			const lang = navigator.language || navigator.userLanguage;
+
+			if (lang.includes('fr')) {
+				window.location = '/fr';
+			} else {
+				window.location = '/en';
+			}
+		</script>
+
+		<h2>You should be redirected to the page with the most appropriate language given by your browser.</h2>
+
+		<p>If this does not happen automatically, you can go to the <a href="/en">English version</a> directly.</p>
+
+		<hr/>
+
+		<h2>Vous devriez être redirigé‧e vers une page dans la langue la plus appropriée d'après votre navigateur.</h2>
+
+		<p>Si cela n’a pas lieu automatiquement, vous pouvez aller à la <a href="/fr">version française</a> directement.</p>
+		<script type="text/javascript">var _paq = window._paq || [];
+			_paq.push(['setDomains', ['*.quaidorsay.fr', 'ambanum.github.io']]);
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push([function () {
+			var self = this;
+			function getOriginalVisitorCookieTimeout() {
+			var now = new Date(),
+			nowTs = Math.round(now.getTime() / 1000),
+			visitorInfo = self.getVisitorInfo();
+			var createTs = parseInt(visitorInfo[2]);
+			var cookieTimeout = 13 * 30 * 24 * 60 * 60; // 13 months in seconds
+			var originalTimeout = createTs + cookieTimeout - nowTs;
+			return originalTimeout;
+			}
+			this.setVisitorCookieTimeout(getOriginalVisitorCookieTimeout());
+			}]);
+			(function () {
+			var u = 'https://stats.data.gouv.fr/';
+			_paq.push(['setTrackerUrl', u + 'piwik.php']);
+			_paq.push(['setSiteId', '89']);
+			var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+			g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+			})();
+		</script><noscript><img src="https://stats.data.gouv.fr/matomo.php?idsite=89&amp;rec=1" style="border:0;" alt=""></noscript>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+body {
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.hero h1.title {
+	font-size: 10em;
+}
+
+.hero h2.subtitle {
+	font-size: 2em;
+}
+
+.logo {
+	height: 20px;
+}
+
+.hero-head {
+	padding: 10px;
+	padding-bottom: 0;
+	color: #116830;
+}
+
+.hero-foot {
+	padding: 10px;
+	padding-top: 0;
+}
+
+.hero .hero-foot a {
+	text-decoration: underline;
+}
+
+.hero.is-success .hero-foot a:not(.button):not(.dropdown-item):not(.tag):hover, 
+.hero.is-success .hero-foot span {
+	color: #116830;
+}
+
+[class*="c3-target-Neuvième-décile"] .c3-line,
+[class*="c3-target-Premier-décile"] .c3-line {
+	stroke-dasharray: 2,2;
+}
+
+[class*="c3-target-Médiane"] .c3-line {
+	stroke-width: 2px;
+	color: red;
+}
+
+.graphs > div {
+	margin-bottom: 3em;
+	padding: 1em 0;
+	background: whitesmoke;
+}
+
+.navbar-item {
+	display: inline-block;
+}
