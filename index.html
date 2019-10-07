@@ -19,9 +19,9 @@
 			const lang = navigator.language || navigator.userLanguage;
 
 			if (lang.includes('fr')) {
-				window.location = '/fr';
+				window.location = `${window.location.href}/fr`;
 			} else {
-				window.location = '/en';
+				window.location = `${window.location.href}/en`;
 			}
 		</script>
 
