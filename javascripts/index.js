@@ -2,7 +2,8 @@ if (!window.TwitterUserGraph) {
 	document.querySelector('.graphs').style.display = 'none';
 	document.querySelector('.graph-title').style.display = 'none';
 } else {
-	const langInUrl = window.location.pathname.split('/')[1];
+	// use second element of pathname as the first one is `twitter-bot-clusters`
+	const langInUrl = window.location.pathname.split('/')[2];
 	i18next.init({
 		lng: (['en', 'fr'].includes(langInUrl) && langInUrl) || 'en',
 		resources: {
