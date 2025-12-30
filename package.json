@@ -11,11 +11,11 @@
 	"license": "ISC",
 	"dependencies": {
 		"assert": "^1.4.1",
-		"cookie-parser": "~1.4.3",
+		"cookie-parser": "~1.4.7",
 		"cron": "^1.6.0",
 		"debug": "~2.6.9",
 		"dotenv": "^6.2.0",
-		"express": "^4.16.4",
+		"express": "^4.22.1",
 		"http-errors": "~1.6.2",
 		"i18n": "^0.8.3",
 		"lodash": "^4.17.11",
